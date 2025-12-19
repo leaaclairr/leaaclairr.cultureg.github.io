@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Adresses IP</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCBBF0;
+    background-image: url("https://www.publicdomainpictures.net/pictures/320000/velka/christmas-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 4px solid pink;
+    box-shadow: 0 0 15px black;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #F40BC9;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #C809A5;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+    border: 2px solid #FA8FE6;
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #C809A5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #C809A5;
+}
+
+#resultat {
+    margin-top: 15px;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+</style>
+
+<script>
+function calculerNote() {
+    let score = 0;
+    let total = 20;
+
+    if (document.getElementById("q1").value === "2") score++;
+    if (document.getElementById("q2").value === "1") score++;
+    if (document.getElementById("q3").value === "3") score++;
+    if (document.getElementById("q4").value === "4") score++;
+    if (document.getElementById("q5").value === "1") score++;
+    if (document.getElementById("q6").value === "2") score++;
+    if (document.getElementById("q7").value === "4") score++;
+    if (document.getElementById("q8").value === "3") score++;
+    if (document.getElementById("q9").value === "2") score++;
+    if (document.getElementById("q10").value === "4") score++;
+    if (document.getElementById("q11").value === "1") score++;
+    if (document.getElementById("q12").value === "1") score++;
+    if (document.getElementById("q13").value === "2") score++;
+    if (document.getElementById("q14").value === "2") score++;
+    if (document.getElementById("q15").value === "4") score++;
+	if (document.getElementById("q16").value === "3") score++;
+	if (document.getElementById("q17").value === "2") score++;
+	if (document.getElementById("q18").value === "3") score++;
+	if (document.getElementById("q19").value === "1") score++;
+	if (document.getElementById("q20").value === "4") score++;
+	
+	let message = "Ton score est de " + score + " / " + total;
+
+    if (score <= 10) {
+		message += " - Il faut revoir tes bases";
+	}
+	
+	else if (score > 10 && score < 15) {
+		message += " - Pas mal";
+	}
+	
+	else if  (score >= 15) {
+		message +=  " - Bravo, tu es très cultivé";
+	}
+	
+	document.getElementById("resultat").innerText = message;
+}
+	
+function correction() {
+    const div = document.getElementById("correction");
+    // Si le div est vide, on affiche les corrections
+    if (div.innerHTML === "") {
+        div.innerHTML = `
+            <p>Question 1 : Ottawa</p>
+            <p>Question 2 : 7</p>
+            <p>Question 3 : Léonard de Vinci</p>
+            <p>Question 4 : L'océan Pacifique</p>
+            <p>Question 5 : 1969</p>
+            <p>Question 6 : L'Oxygène</p>
+            <p>Question 7 : Le Japon</p>
+            <p>Question 8 : 11</p>
+            <p>Question 9 : Le Nil</p>
+            <p>Question 10 : Victor Hugo</p>
+            <p>Question 11 : Mercure</p>
+            <p>Question 12 : Le guépard</p>
+            <p>Question 13 : En Italie</p>
+            <p>Question 14 : 6</p>
+            <p>Question 15 : Le désert de l'Antarctique</p>
+            <p>Question 16 : Le chinois mandarin</p>
+            <p>Question 17 : Le sismographe</p>
+            <p>Question 18 : La Russie</p>
+            <p>Question 19 : Louis-Napoléon Bonaparte</p>
+            <p>Question 20 : 32</p>
+        `;
+    } else {
+        // Sinon, on cache les corrections
+        div.innerHTML = "";
+    }
+}
+
+	
+</script>
+
+</head>
+<body>
+<img src="gauche.png" class="side-image" alt="image gauche">
+<div class="container">
+    <h1>Quiz Culture Générale</h1>
+    <form name="formulaire_poste">
+        <label for="q1">Quelle est la capitale du Canada ?</label>
+        <select id="q1">
+            <option value="">-- Choisir --</option>
+            <option value="1">Dakar</option>
+            <option value="2">Ottawa</option>
+            <option value="3">Quito</option>
+            <option value="4">Riga</option>
+        </select>
+		
+        <label for="q2">Combien de continents y a-t-il sur Terre ?</label>
+        <select id="q2">
+            <option value="">-- Choisir --</option>
+            <option value="1">7</option>
+            <option value="2">5</option>
+            <option value="3">8</option>
+            <option value="4">6</option>
+			<option value="5">Aucune de ces propositions</option>
+        </select>
+		
+        <label for="q3">Qui a peint la Joconde ?</label>
+        <select id="q3">
+            <option value="">-- Choisir --</option>
+            <option value="1">Claude Monet</option>
+            <option value="2">Vincent Van Gogh</option>
+            <option value="3">Léonard de Vinci</option>
+            <option value="4">Gustave Klimt</option>
+        </select>
+		
+        <label for="q4">Quel est le plus grand océan du monde ?</label>
+        <select id="q4">
+            <option value="">-- Choisir --</option>
+            <option value="1">L'océan Atlantique</option>
+            <option value="2">L'océan Indien</option>
+            <option value="3">L'océan Arctique</option>
+            <option value="4">L'océan Pacifique</option>
+        </select>
+		
+        <label for="q5">En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?</label>
+        <select id="q5">
+            <option value="">-- Choisir --</option>
+            <option value="1">1969</option>
+            <option value="2">1970</option>
+            <option value="3">1971</option>
+            <option value="4">1972</option>
+        </select>
+		
+        <label for="q6">Quel est l'élément chimique dont le symbole est O ?</label>
+        <select id="q6">
+            <option value="">-- Choisir --</option>
+            <option value="1">Thallium</option>
+            <option value="2">L'Oxygène</option>
+            <option value="3">Plomb</option>
+            <option value="4">L'Osmium</option>
+        </select>
+		
+        <label for="q7">Quel pays est surnommé "le pays du Soleil-Levant" ?</label>
+        <select id="q7">
+            <option value="">-- Choisir --</option>
+            <option value="1">La Thailande</option>
+            <option value="2">L'inde</option>
+            <option value="3">La Chine</option>
+            <option value="4">Le Japon</option>
+        </select>
+		
+        <label for="q8">Combien de joueurs y a-t-il dans l'équipe de football sur le terrain ?</label>
+        <select id="q8">
+            <option value="">-- Choisir --</option>
+            <option value="1">9</option>
+            <option value="2">10</option>
+            <option value="3">11</option>
+            <option value="4">12</option>
+        </select>
+		
+        <label for="q9">Quel est le plus long fleuve du monde ?</label>
+        <select id="q9">
+            <option value="">-- Choisir --</option>
+            <option value="1">L'Amazone</option>
+            <option value="2">Le Nil</option>
+            <option value="3">Le Mississippi-Missouri</option>
+            <option value="4">Le Yangtsé</option>
+        </select>
+		
+        <label for="q10">Qui a écrit <em>Les misérables ?</em></label>
+        <select id="q10">
+            <option value="">-- Choisir --</option>
+            <option value="1">Gustave Flaubert</option>
+            <option value="2">Marcel Proust</option>
+            <option value="3">Émile Zola</option>
+            <option value="4">Victor Hugo</option>
+        </select>
+		
+        <label for="q11">Quelle planète est la plus proche du Soleil ?</label>
+        <select id="q11">
+            <option value="">-- Choisir --</option>
+            <option value="1">Mercure</option>
+            <option value="2">Jupiter</option>
+            <option value="3">Mars</option>
+            <option value="4">Saturne</option>
+        </select>
+		
+        <label for="q12">Quel est l'animal terrestre le plus rapide ?</label>
+        <select id="q12">
+            <option value="">-- Choisir --</option>
+            <option value="1">Le guépard</option>
+            <option value="2">Le lion</option>
+            <option value="3">L'antilope</option>
+            <option value="4">Le springbok</option>
+        </select>
+		
+        <label for="q13">Dans quel pays se trouve la tour de Pise ?</label>
+        <select id="q13">
+            <option value="">-- Choisir --</option>
+            <option value="1">En Grèce</option>
+            <option value="2">En Italie</option>
+            <option value="3">En France</option>
+            <option value="4">Au Portugal</option>
+        </select>
+		
+        <label for="q14">Combien de cotés possède un hexagone ?</label>
+        <select id="q14">
+            <option value="">-- Choisir --</option>
+            <option value="1">5</option>
+            <option value="2">6</option>
+            <option value="3">7</option>
+            <option value="4">8</option>
+        </select>
+		
+        <label for="q15">Quel est le plus grand désert du monde ?</label>
+        <select id="q15">
+            <option value="">-- Choisir --</option>
+            <option value="1">Le désert de l'Arctique</option>
+            <option value="2">Le désert du Sahara</option>
+            <option value="3">Le désert d'Arabie</option>
+            <option value="4">Le désert de l'Antarctique</option>
+        </select>
+		
+        <label for="q16">Quelle langue est la plus parlée dans le monde (en nombre de locuteurs natifs) ?</label>
+        <select id="q16">
+            <option value="">-- Choisir --</option>
+            <option value="1">L'Espagnol</option>
+            <option value="2">L'Anglais</option>
+            <option value="3">Le chinois mandarin</option>
+            <option value="4">L'hindi</option>
+        </select>
+		
+        <label for="q17">Quel instrument sert à mesurer les tremblements de terre ?</label>
+        <select id="q17">
+            <option value="">-- Choisir --</option>
+            <option value="1">L'anémomètre</option>
+            <option value="2">Le sismographe</option>
+            <option value="3">Le baromètre</option>
+            <option value="4">Le pluviomètre</option>
+        </select>
+		
+        <label for="q18">Quel est le plus grand pays en superficie ? </label>
+        <select id="q18">
+            <option value="">-- Choisir --</option>
+            <option value="1">Les États-Unis</option>
+            <option value="2">Le Canada</option>
+            <option value="3">La Russie</option>
+            <option value="4">La Chine</option>
+        </select>
+		
+        <label for="q19">Qui était le premier président de la République française ?</label>
+        <select id="q19">
+            <option value="">-- Choisir --</option>
+            <option value="1">Louis-Napoléon Bonaparte</option>
+            <option value="2">Patrice de Mac Mahon</option>
+            <option value="3">Adolphe Thiers</option>
+            <option value="4">Jule Grévy</option>
+        </select>
+		
+        <label for="q20">Combien de dents possède un adulte en générale ?</label>
+        <select id="q20">
+            <option value="">-- Choisir --</option>
+            <option value="1">29</option>
+            <option value="2">30</option>
+            <option value="3">31</option>
+            <option value="4">32</option>
+        </select>
+
+
+        <input type="button" value="Valider le quiz" onclick="calculerNote()">
+
+        <p id="resultat"></p>
+    </form>
+	
+<input type="button" value="Correction" onclick="correction()">
+<div id="correction"></div>
+
+</div>
+</body>
+</html>
+
+
+        <!-- <label for="q"></label> -->
+        <!-- <select id="q"> -->
+            <!-- <option value="">-- Choisir --</option> -->
+            <!-- <option value="1"></option> -->
+            <!-- <option value="2"></option> -->
+            <!-- <option value="3"></option> -->
+            <!-- <option value="4"></option> -->
+        <!-- </select> -->
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
