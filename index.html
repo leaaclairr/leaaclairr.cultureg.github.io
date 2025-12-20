@@ -96,7 +96,6 @@ function corrigerQuestion(num, bonneValeur) {
     const select = document.getElementById("q" + num);
     const div = document.getElementById("question" + num);
 
-    // Nettoyage si on reclique sur "Valider"
     div.classList.remove("bonne", "mauvaise");
 
     if (select.value === bonneValeur) {
@@ -151,7 +150,6 @@ function calculerNote() {
 	
 function correction() {
     const div = document.getElementById("correction");
-    // Si le div est vide, on affiche les corrections
     if (div.innerHTML === "") {
         div.innerHTML = `
             <p>Question 1 : Ottawa</p>
@@ -176,7 +174,6 @@ function correction() {
             <p>Question 20 : 32</p>
         `;
     } else {
-        // Sinon, on cache les corrections
         div.innerHTML = "";
     }
 }
@@ -187,7 +184,7 @@ function correction() {
 </head>
 <body>
 <div class="container">
-    <h1>Quiz Culture Générale</h1>
+    <h1>Quiz de Culture Générale</h1>
     <form name="formulaire_poste">
 	
 	
@@ -230,10 +227,10 @@ function correction() {
 <label for="q4">Quel est le plus grand océan du monde ?</label>
 <select id="q4">
 <option value="">-- Choisir --</option>
-<option value="1">Atlantique</option>
-<option value="2">Indien</option>
-<option value="3">Arctique</option>
-<option value="4">Pacifique</option>
+<option value="1">L'océan Atlantique</option>
+<option value="2">L'océan Indien</option>
+<option value="3">L'océan Arctique</option>
+<option value="4">L'océan Pacifique</option>
 </select>
 </div>
 
@@ -263,10 +260,10 @@ function correction() {
 <label for="q7">Quel pays est le « pays du Soleil-Levant » ?</label>
 <select id="q7">
 <option value="">-- Choisir --</option>
-<option value="1">Thaïlande</option>
-<option value="2">Inde</option>
-<option value="3">Chine</option>
-<option value="4">Japon</option>
+<option value="1">La Thaïlande</option>
+<option value="2">L'Inde</option>
+<option value="3">La Chine</option>
+<option value="4">Le Japon</option>
 </select>
 </div>
 
@@ -285,10 +282,10 @@ function correction() {
 <label for="q9">Quel est le plus long fleuve du monde ?</label>
 <select id="q9">
 <option value="">-- Choisir --</option>
-<option value="1">Amazone</option>
-<option value="2">Nil</option>
-<option value="3">Mississippi</option>
-<option value="4">Yangtsé</option>
+<option value="1">L'Amazone</option>
+<option value="2">Le Nil</option>
+<option value="3">Le Mississippi</option>
+<option value="4">Le Yangtsé</option>
 </select>
 </div>
 
@@ -296,9 +293,9 @@ function correction() {
 <label for="q10">Qui a écrit <em>Les Misérables</em> ?</label>
 <select id="q10">
 <option value="">-- Choisir --</option>
-<option value="1">Flaubert</option>
-<option value="2">Proust</option>
-<option value="3">Zola</option>
+<option value="1">Gustave Flaubert</option>
+<option value="2">Marcel Proust</option>
+<option value="3">Émile Zola</option>
 <option value="4">Victor Hugo</option>
 </select>
 </div>
@@ -318,10 +315,10 @@ function correction() {
 <label for="q12">Quel est l’animal terrestre le plus rapide ?</label>
 <select id="q12">
 <option value="">-- Choisir --</option>
-<option value="1">Guépard</option>
-<option value="2">Lion</option>
-<option value="3">Antilope</option>
-<option value="4">Springbok</option>
+<option value="1">Le Guépard</option>
+<option value="2">Le Lion</option>
+<option value="3">L'Antilope</option>
+<option value="4">Le Springbok</option>
 </select>
 </div>
 
@@ -329,10 +326,10 @@ function correction() {
 <label for="q13">Dans quel pays se trouve la tour de Pise ?</label>
 <select id="q13">
 <option value="">-- Choisir --</option>
-<option value="1">Grèce</option>
-<option value="2">Italie</option>
-<option value="3">France</option>
-<option value="4">Portugal</option>
+<option value="1">En Grèce</option>
+<option value="2">En Italie</option>
+<option value="3">En France</option>
+<option value="4">Au Portugal</option>
 </select>
 </div>
 
@@ -351,54 +348,54 @@ function correction() {
 <label for="q15">Quel est le plus grand désert du monde ?</label>
 <select id="q15">
 <option value="">-- Choisir --</option>
-<option value="1">Arctique</option>
-<option value="2">Sahara</option>
-<option value="3">Arabie</option>
-<option value="4">Antarctique</option>
+<option value="1">L'Arctique</option>
+<option value="2">Le Sahara</option>
+<option value="3">L'Arabie</option>
+<option value="4">L'Antarctique</option>
 </select>
 </div>
 
 <div class="question" id="question16">
-<label for="q16">Langue la plus parlée (natifs) ?</label>
+<label for="q16">Quelle est la langue la plus parlée (natifs) ?</label>
 <select id="q16">
 <option value="">-- Choisir --</option>
-<option value="1">Espagnol</option>
-<option value="2">Anglais</option>
-<option value="3">Chinois mandarin</option>
-<option value="4">Hindi</option>
+<option value="1">L'Espagnol</option>
+<option value="2">L'Anglais</option>
+<option value="3">Le Chinois mandarin</option>
+<option value="4">L'Hindi</option>
 </select>
 </div>
 
 <div class="question" id="question17">
-<label for="q17">Instrument des séismes ?</label>
+<label for="q17">Quel est l'appareil qui enregistre et mesure les tremblements de terre ?</label>
 <select id="q17">
 <option value="">-- Choisir --</option>
-<option value="1">Anémomètre</option>
-<option value="2">Sismographe</option>
-<option value="3">Baromètre</option>
-<option value="4">Pluviomètre</option>
+<option value="1">L'Anémomètre</option>
+<option value="2">Le Sismographe</option>
+<option value="3">Le Baromètre</option>
+<option value="4">Le Pluviomètre</option>
 </select>
 </div>
 
 <div class="question" id="question18">
-<label for="q18">Plus grand pays du monde ?</label>
+<label for="q18">Quel pays possède la plus grande superficie au monde ?</label>
 <select id="q18">
 <option value="">-- Choisir --</option>
-<option value="1">USA</option>
-<option value="2">Canada</option>
-<option value="3">Russie</option>
-<option value="4">Chine</option>
+<option value="1">Les USA</option>
+<option value="2">Le Canada</option>
+<option value="3">La Russie</option>
+<option value="4">La Chine</option>
 </select>
 </div>
 
 <div class="question" id="question19">
-<label for="q19">Premier président français ?</label>
+<label for="q19">Qui à été le premier président français ?</label>
 <select id="q19">
 <option value="">-- Choisir --</option>
 <option value="1">Louis-Napoléon Bonaparte</option>
-<option value="2">Mac Mahon</option>
-<option value="3">Thiers</option>
-<option value="4">Grévy</option>
+<option value="2">Edme-Patrice Maurice de Mac-Mahon</option>
+<option value="3">Adolphe Thiers</option>
+<option value="4">Jules Grévy</option>
 </select>
 </div>
 
@@ -446,5 +443,6 @@ function correction() {
 		
 
 		
+
 
 
